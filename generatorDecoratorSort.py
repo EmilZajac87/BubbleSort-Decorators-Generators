@@ -22,15 +22,15 @@ def normalSort(lista):
 
     return sorted(lista)
 
-def normalSortAnother(lista):
-    lista.sort()
+def normalSortAnotherReverse(lista):
+    lista.sort(reverse=True)
     return lista
 
 def bubbleSort(lista):
-
-    for i in range(len(lista)-1):
-        if lista[i] > lista[i+1]:
-            lista[i], lista[i + 1] = lista[i+1], lista[i]
+    for j in range(len(lista)):
+        for i in range(len(lista)-1):
+            if lista[i] > lista[i+1]:
+                lista[i], lista[i + 1] = lista[i+1], lista[i]
     return lista
 
 lista = [54, 1, 87, 100, 23, 4, 6, 1]
@@ -38,8 +38,8 @@ lista = [54, 1, 87, 100, 23, 4, 6, 1]
 lista_sorted = normalSort(lista)
 print("This list was sorted by sorted: {}".format(lista_sorted))
 
-lista_sort = normalSortAnother(lista)
-print("This list was sorted by sort: {}".format(lista_sort))
+lista_sort = normalSortAnotherReverse(lista)
+print("This list was sorted by sort(reverse): {}".format(lista_sort))
 
 lista_bubble_sort = bubbleSort(lista)
 print("This list was sorted by bubble sort alghorytm {}".format(lista_bubble_sort))
