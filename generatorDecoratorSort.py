@@ -1,6 +1,3 @@
-#learn how to use decorators(time when function was opened, sqrt another var in func), generator
-#sort another method than sord or sorted (alghoritm) and operation with files
-
 import time
 
 def decorators1(func):
